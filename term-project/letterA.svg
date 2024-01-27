@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   sodipodi:docname="çizim5.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="46.352862"
+     inkscape:cx="229.52197"
+     inkscape:cy="368.76903"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <linearGradient
+       id="linearGradient1-1">
+      <stop
+         style="stop-color:#fbdf9d;stop-opacity:0.76836157;"
+         offset="0.46036589"
+         id="stop1" />
+      <stop
+         style="stop-color:#ff0074;stop-opacity:0;"
+         offset="1"
+         id="stop2" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1-1"
+       id="linearGradient2"
+       x1="60.081532"
+       y1="96.660072"
+       x2="61.650425"
+       y2="96.660072"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(184.59822,0,0,184.59821,-11083.587,-17741.751)" />
+  </defs>
+  <g
+     inkscape:label="Katman 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-size:260.489px;font-family:'Goudy Stout';-inkscape-font-specification:'Goudy Stout';fill:url(#linearGradient2);fill-opacity:1;stroke-width:48.8415"
+       x="-20.753107"
+       y="199.59058"
+       id="text1"
+       transform="scale(0.70424295,1.4199645)"><tspan
+         sodipodi:role="line"
+         id="tspan1"
+         style="fill:url(#linearGradient2);fill-opacity:1;stroke-width:48.8415"
+         x="-20.753107"
+         y="199.59058">A</tspan></text>
+    <use
+       id="use4"
+       inkscape:spray-origin="#text1"
+       xlink:href="#text1"
+       transform="translate(-4.6811857,9.1489601)" />
+  </g>
+</svg>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   sodipodi:docname="çizim3.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="65.552846"
+     inkscape:cx="344.10405"
+     inkscape:cy="291.77223"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <linearGradient
+       id="linearGradient1"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#cbca71;stop-opacity:1;"
+         offset="0.34451219"
+         id="stop1" />
+      <stop
+         style="stop-color:#f20089;stop-opacity:0;"
+         offset="0.96341461"
+         id="stop2" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1"
+       id="linearGradient2"
+       x1="90.17598"
+       y1="77.706871"
+       x2="92.039116"
+       y2="77.723015"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(193.04847,0,0,193.04847,-17451.433,-14889.745)" />
+  </defs>
+  <g
+     inkscape:label="Katman 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:272.413px;font-family:'Goudy Stout';-inkscape-font-specification:'Goudy Stout';fill:url(#linearGradient2);fill-opacity:1;stroke-width:51.0774"
+       x="-32.19239"
+       y="202.22792"
+       id="text1"
+       transform="scale(0.69744873,1.4337972)"><tspan
+         sodipodi:role="line"
+         id="tspan1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Goudy Stout';-inkscape-font-specification:'Goudy Stout';fill:url(#linearGradient2);fill-opacity:1;stroke-width:51.0774"
+         x="-32.19239"
+         y="202.22792">Y</tspan></text>
+    <use
+       id="use2"
+       inkscape:spray-origin="#text1"
+       xlink:href="#text1"
+       transform="translate(7.8574857,0.09070064)" />
+  </g>
+</svg>

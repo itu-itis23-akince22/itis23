@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="styles2.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+
+<body>
+    <h1 class="name"><strong>Memory Game</strong></h1>
+    <section class="cards-container">
+        <!-- Kartlar -->
+        <button class="card" data-card="1"><img class="back-face" style="display:none"
+                src="./cute-white-ghost-sticker-preview.png" alt="color" />
+            <img class="front-face" src="./letterC.svg" alt="C" />
+        </button>
+        <button class="card" data-card="2">
+            <img class="back-face" style="display:none" src="./cute-white-ghost-sticker-preview.png" alt="color" /><img
+                class="front-face" src="./letterE.svg" alt="E" />
+        </button>
+        <button class="card" data-card="3"><img class="back-face" style="display:none"
+                src="./cute-white-ghost-sticker-preview.png" alt="color" /><img class="front-face" src="./letterY.svg"
+                alt="Y" />
+        </button>
+        <button class="card" data-card="4"><img class="back-face" style="display:none"
+                src="./cute-white-ghost-sticker-preview.png" alt="color"><img class="front-face" src="./letterD.svg"
+                alt="D" />
+            </div>
+            <button class="card" data-card="5"><img class="back-face" style="display:none"
+                    src="./cute-white-ghost-sticker-preview.png" alt="color"><img class="front-face" src="./letterA.svg"
+                    alt="A" />
+            </button>
+    </section>
+    <div class="progress-container">
+        <button id="start" class="start-button">Start Game</button>
+        <h3>Score: <span id="result">0</span></h3>
+        <button id="restart" class="restart-button">Restart</button>
+    </div>
+
+
+
+    <script>
+        const cards = document.querySelectorAll('.card');
+        const startButton = document.getElementById('start');
+        const restartButton = document.getElementById('restart');
+        const scoreDisplay = document.getElementById('result');
+        var correctOrder = ['C', 'E', 'Y', 'D', 'A'];
+
+
+        let flippedCards = [];
+        let score = 0;
+        let gameEnded = false;
+
+        function shuffleCards() {
+            const cardsContainer = document.querySelector('.cards-container');
+            for (let i = cards.length - 1; i > 0; i--) {
+                const randIndex = Math.floor(Math.random() * (i + 1));
+                cardsContainer.appendChild(cards[randIndex]);
+            }
+        }
+
+        function setInitialFront() {
+            cards.forEach(card => {
+                card.querySelector('.back-face').style.display = 'none';
+                card.querySelector('.front-face').style.display = 'block';
+            });
+        }
+
+        function showBackAfterDelay() {
+            setTimeout(() => {
+                if (!gameEnded) {
+                    cards.forEach(card => {
+                        card.querySelector('.back-face').style.display = 'block';
+                        card.querySelector('.front-face').style.display = 'none';
+                    });
+                }
+            }, 2000);
+        }
+        function flipCard() {
+            if (gameEnded) return;
+            const clickedCard = this.querySelector('.front-face').getAttribute('alt');
+
+            const expectedCard = correctOrder[flippedCards.length];
+            if (clickedCard === expectedCard) {
+                this.querySelector('.back-face').style.display = 'none';
+                this.querySelector('.front-face').style.display = 'block';
+                flippedCards.push(clickedCard);
+
+                score += 20;
+                scoreDisplay.textContent = score;
+
+                if (flippedCards.length === 5) {
+                    score = 100; // When all cards are in correct order, give an extra 100 points
+                    scoreDisplay.textContent = score;
+                    gameEnded = true;
+                    alert("Congratulations! You completed the game.")
+                }
+            } else {
+                alert("Wrong letter. Game over! Your score is " + score);
+                gameEnded = true;
+                scoreDisplay.textContent = score;
+            }
+        }
+
+        function startGame() {
+            setInitialFront(); // Önceden front-face göster
+            setTimeout(() => {
+                shuffleCards(); // 2 saniye sonra karıştır
+                showBackAfterDelay(); // Karıştırdıktan 2 saniye sonra back-face göster
+            }, 2000);
+            score = 0;
+            gameEnded = false;
+            scoreDisplay.textContent = score;
+
+            cards.forEach(card => {
+                card.addEventListener('click', flipCard);
+            });
+        }
+
+        function restartGame() {
+            flippedCards = []; // Reset flipped cards array
+            gameEnded = false; // Reset game status
+            score = 0; // Reset score
+            scoreDisplay.textContent = score; // Update score display
+
+            // Show initial front face and hide back face for each card
+            setInitialFront();
+            setTimeout(() => {
+                shuffleCards(); // 2 saniye sonra karıştır
+                showBackAfterDelay(); // Karıştırdıktan 2 saniye sonra back-face göster
+            }, 2000);
+
+            cards.forEach(card => {
+                card.addEventListener('click', flipCard); // Reattach click event listener
+            });
+        }
+
+        startButton.addEventListener('click', startGame);
+        restartButton.addEventListener('click', restartGame);
+
+
+    </script>
+</body>
+
+</html>

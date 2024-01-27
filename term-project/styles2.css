@@ -1,0 +1,80 @@
+body {
+  background: radial-gradient(rgb(191, 224, 251) 0%, rgb(232, 233, 251) 25.8%, rgb(252, 239, 250) 50.8%, rgb(234, 251, 251) 77.6%, rgb(240, 251, 244) 100.7%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+button {
+  border: 1px solid #885df1;
+  border-radius: 30px;
+  box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.2);
+  margin: 20px auto;
+  display: block;
+  color: #885df1;
+  font-size: 16px;
+  background: transparent;
+  padding: 15px 20px;
+  transition: all 200ms ease;
+  cursor: pointer;
+}
+
+button:hover {
+  color: #fff;
+  background: #885df1;
+}
+
+.name {
+  color: #885df1;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  justify-content: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.card {
+  position: relative;
+  width: 100px;
+  height: 150px;
+  perspective: 1000px;
+  /* 3D efekt için perspektif */
+  cursor: pointer;
+  /* Kartlara tıklanabilir olmasını sağlar */
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  object-fit: cover;
+  /* Resimleri kart boyutuna sığacak şekilde ayarlar */
+  transform-style: preserve-3d;
+  /* 3D dönüşümü korur */
+  transition: transform 0.6s ease;
+}
+
+.card .front-face {
+  transform: rotateY(0deg);
+  /* İlk başta ön yüz görünsün */
+}
+
+.card:hover img {
+  transform: rotateY(180deg);
+  /* Üzerine gelindiğinde dönsün */
+}
